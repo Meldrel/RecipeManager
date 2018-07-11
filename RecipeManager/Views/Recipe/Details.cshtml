@@ -1,0 +1,28 @@
+﻿@model Recipe
+
+@{
+    ViewData["Title"] = "Details";
+}
+<hr />
+<div class="row">
+    <div class="col-6">
+        <h1>@Model.Name</h1>
+    </div>
+</div>
+@foreach (var ingredient in Model.Ingredients)
+{
+    <div class="row">
+        <div class="col-3">
+            @ingredient.Ingredient.Name
+        </div>
+        <div class="col-3">
+            @ingredient.Amount
+        </div>
+    </div>
+}
+    <div class="row">
+        <div class="col-4"/>
+        <div class="col-2">
+            <a class="btn btn-info" asp-action="Recipes">Return</a>
+        </div>
+    </div>

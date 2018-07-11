@@ -1,19 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
+using RecipeManager.Model;
+using RecipeManager.Services.Interfaces;
+using RecipeManager.ViewModel;
 
 namespace RecipeManager.Controllers
 {
     public class RecipeController : Controller
     {
-        public string Index()
+        private IRecipeProvider _recipeProvider;
+
+        public RecipeController(IRecipeProvider recipeProvider)
         {
-            return "Recipe!!!";
+            _recipeProvider = recipeProvider;
         }
-        
+       
+
+        public IActionResult Recipes()
+        {
+            return View(_recipeProvider.GetRecipes());
+        }
+
+
+        public IActionResult Details(int id)
+        {
+            return View(_recipeProvider.GetRecipe(id));
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(RecipeViewModel recipeViewModel)
+        {
+            var recipe = new Recipe();
+            recipe.Name = recipeViewModel.Name;
+            recipe.Ingredients = new List<RecipeIngredient>();
+
+            recipe = _recipeProvider.AddRecipe(recipe);
+
+            return RedirectToAction(nameof(Details), new { id = recipe.ID });
+        }
+
+        public IActionResult Edit(int id)
+        {
+            return View(_recipeProvider.GetRecipe(id));
+        }
+
         //// GET: Recipe
         //public ActionResult Index()
         //{

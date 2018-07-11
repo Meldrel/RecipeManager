@@ -1,0 +1,44 @@
+﻿@model IEnumerable<Recipe>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Recipes";
+}
+
+<hr />
+<h2>Recipes</h2>
+<hr />
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="bg-info">
+            <tr>
+                <th scope="col">
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th />
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var recipe in Model)
+            {
+                <tr>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => recipe.ID)
+                    </td>
+                    <td scope="row">
+                        @Html.DisplayFor(modelItem => recipe.Name)
+                    </td>
+                    <td>
+                        <a class="btn bg-warning" asp-action="Details" asp-route-id="@recipe.ID">More</a>
+                        <a class="btn bg-warning" asp-action="Edit" asp-route-id="@recipe.ID">Edit</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a class="btn bg-success" asp-action="Create">Add Recipe</a>
+</div>
