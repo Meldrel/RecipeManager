@@ -1,0 +1,15 @@
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\bin\Debug\netcoreapp2.1\RecipeManager.deps.json
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\bin\Debug\netcoreapp2.1\RecipeManager.runtimeconfig.json
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\bin\Debug\netcoreapp2.1\RecipeManager.runtimeconfig.dev.json
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\bin\Debug\netcoreapp2.1\RecipeManager.dll
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\bin\Debug\netcoreapp2.1\RecipeManager.pdb
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.csprojAssemblyReference.cache
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.csproj.CoreCompileInputs.cache
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.RazorAssemblyInfo.cache
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.RazorAssemblyInfo.cs
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.AssemblyInfoInputs.cache
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.AssemblyInfo.cs
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.RazorTargetAssemblyInfo.cache
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.dll
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\RecipeManager.pdb
+C:\Users\Sergio\source\repos\RecipeManager\RecipeManager\obj\Debug\netcoreapp2.1\UserSecretsAssemblyInfo.cs

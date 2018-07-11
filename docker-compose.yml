@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  recipemanager:
+    image: ${DOCKER_REGISTRY}recipemanager
+    build:
+      context: .
+      dockerfile: RecipeManager\Dockerfile

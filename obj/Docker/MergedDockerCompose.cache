@@ -1,0 +1,22 @@
+networks:
+  default:
+    external:
+      name: nat
+services:
+  recipemanager:
+    build:
+      context: C:\repos\GitHub\RecipeManager
+      dockerfile: RecipeManager\Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: recipemanager
+    ports:
+    - published: 62245
+      target: 80
+    - published: 44335
+      target: 443
+    volumes:
+    - C:\Users\Sergio\AppData\Roaming\ASP.NET\Https:C:\Users\ContainerUser\AppData\Roaming\ASP.NET\Https:ro
+    - C:\Users\Sergio\AppData\Roaming\Microsoft\UserSecrets:C:\Users\ContainerUser\AppData\Roaming\Microsoft\UserSecrets:ro
+version: '3.4'
